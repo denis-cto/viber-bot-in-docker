@@ -13,7 +13,7 @@ module.exports = {
             instances: 1,
             env_test: {
                 NODE_ENV: 'test_mobsted38',
-                port: 20000,
+                port: 10022,
                 Token: '46c189c3e367d6c4-94b2d6ba325cedfe-901014b22700d284',
                 ApplicationId: 38,
                 TenantName: 'denis',
