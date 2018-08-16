@@ -6,7 +6,10 @@ Bot is exposed to port 10022 and accessible at https://denis.mbst.xyz:10022
 But we cant expose all ports, so we hide viber-bot behind nginx.
 we're proxying requests from https://denis.mbst.xyz/bot/10022 to local container running on 10022 port
 But when pm2 launcher is inside docker and host for viber is proxied behind nginx
-it fails to set up viber webhoook.
+it fails to set up viber webhoook. But! Viber-bot is avaialble from outside. You can GET/POST https://denis.mbst.xyz and see in viberhost logs 
+Check logs at `logs/pm2` folder.
+But in that same moment, nginx in `logs/nginx` says that he gets a 404 error message.
+ And viber-bot is GETTING(!) request from viber server, can see it, but reports that setting webhook failed.
 
 ## how to reproduce
 ### 1. Build local images
