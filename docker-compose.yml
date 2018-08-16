@@ -1,0 +1,36 @@
+version: '3'
+services:
+  nginx:
+    image: mobsted/nginx:latest
+    container_name: mbst_nginx
+    working_dir: /home/www/mobsted/boiler
+    volumes:
+    - ${PROJECT_PATH}:/home/www/mobsted
+    - ./logs/nginx:/var/log/nginx
+    - ./conf/nginx/mbst_xyz.conf:/etc/nginx/conf.d/mbst_xyz.conf
+    - ./conf/nginx/default_80_2_443.conf:/etc/nginx/conf.d/default_80_2_443.conf
+    - ./conf/ssl:/certs
+    - ./conf/letsencrypt:/etc/letsencrypt/
+    - ./conf/ssl/data:/ssl/data/
+    ports:
+    - "80:80"
+    - "443:443"
+    networks:
+      - frontend
+      - backend
+  viberhost:
+    image: mobsted/telegramhost:latest
+    container_name: viberhost
+    working_dir: /home/www/mobsted/bots
+    volumes:
+    - ${PROJECT_PATH}/bots:/home/www/mobsted/bots
+    - ./logs/pm2:/root/.pm2/logs/
+    command: ecosystem_test_viber.config.js --env test --watch
+    networks:
+      - frontend
+      - backend
+networks:
+  backend:
+volumes:
+  node_modules:
+
