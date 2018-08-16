@@ -11,9 +11,9 @@
     "config": {
       "host": "denis.mbst.xyz",
       "startingPortTelegram": 40000,
-      "startingPortViber": 20000,
+      "startingPortViber": 10000,
       "startingPortFacebook": 30000,
-      "startingPortVk": 10000
+      "startingPortVk": 20000
     }
   }
 }
