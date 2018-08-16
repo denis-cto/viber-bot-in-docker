@@ -1,12 +1,28 @@
 # viber-bot-in-docker
-Starting Viber-bot with pm2 with docker containers
+Starting Viber-bot with pm2 with docker containers.
 
 The problem: when I start viber-bot on the host machine it works like a charm.
-Bot is exposed to port 10022 and accessible at https://denis.mbst.xyz:10022
-But we cant expose all ports, so we hide viber-bot behind nginx.
-we're proxying requests from https://denis.mbst.xyz/bot/10022 to local container running on 10022 port
-But when pm2 launcher is inside docker and host for viber is proxied behind nginx
-it fails to set up viber webhoook. But! Viber-bot is avaialble from outside. You can GET/POST https://denis.mbst.xyz and see in viberhost logs 
+Bot is exposed to port 10022 and accessible at https://denis.mbst.xyz:10022. 
+The code is at images/bots/viberhost/src/viber/MobstedViberBot.js: 49. You can even take source code to run from
+https://developers.viber.com/docs/api/nodejs-bot-api/
+
+```javascript
+ viberListenerServer.createServer(this.miniapp.middleware()).listen(params['port'], () => {
+      that.miniapp.setWebhook(webhookurl).catch(function (e) {
+        console.warn('NO WEBHOOK SET! Problem IS HERE!')
+        console.log(e);
+      });
+    });
+```
+
+
+**But we cant expose all ports, so we hide viber-bot behind nginx.**
+We're running nginx on host denis.mbst.xyz.
+We're proxying requests from https://denis.mbst.xyz/bot/10022 to local container running on 10022 port
+
+But when pm2  launcher (https://pm2.io/doc/en/runtime/integration/docker/) is inside docker and host for viber-bot is proxied behind nginx - it fails to set up viber webhoook. **But! At the same time:  Viber-bot is avaialble from outside! On that url!**
+
+You can GET/POST https://denis.mbst.xyz/bot/10022 and see in viberhost logs that it does some logging. So the request is reaching it.
 Check logs at `logs/pm2` folder.
 But in that same moment, nginx in `logs/nginx` says that he gets a 404 error message.
  And viber-bot is GETTING(!) request from viber server, can see it, but reports that setting webhook failed.
@@ -50,5 +66,11 @@ location ~/bot/(1[0-9][0-9][0-9][0-9]).
 ```
 Container with viber-bots runs
 ```bash
-pm2 start ecosystem_test_viber.config.js 
+pm2 start ecosystem_test_viber.config.js --env=test
 ```
+This config containg
+###Problem!
+ Please help to fix NGINX config, so it will alllow viber-bot to set up webhook. I think that the problem is with some Headers maybe, or 
+ with some connection problem between Viber.com - Nginx -Viber-bot...
+ Please feel free to comment out this situation.
+ 
