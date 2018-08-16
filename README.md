@@ -30,6 +30,14 @@ But in that same moment, nginx in `logs/nginx` says that he gets a 404 error mes
 
 ```
  And viber-bot is GETTING(!) request from viber server, can see it, but reports that setting webhook failed.
+ 
+Viber returns
+```log
+ { status: 1,
+viberhost    |   status_message:
+viberhost    |    'Result[HttpRequest[POST /bot/20000 HTTP/1.1]@2012c58b > HttpResponse[HTTP/1.1 404 Not Found]@4de7d6f1] null' }
+
+```
 
 ## how to reproduce
 ### 1. Build local images
