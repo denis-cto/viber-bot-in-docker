@@ -24,7 +24,11 @@ But when pm2  launcher (https://pm2.io/doc/en/runtime/integration/docker/) is in
 
 You can GET/POST https://denis.mbst.xyz/bot/10022 and see in viberhost logs that it does some logging. So the request is reaching it.
 Check logs at `logs/pm2` folder.
-But in that same moment, nginx in `logs/nginx` says that he gets a 404 error message.
+But in that same moment, nginx in `logs/nginx` says that he gets a 404 error message (Wtf?!)
+```log
+172.27.0.1 - - [14/Aug/2018:06:12:44 +0000] "POST /bot/20000?sig=f985f3f4b20a9f67e8c4b1849dee6346845dd3c2916f86b8f68a96c418440eef HTTP/1.1" 404 149 "-" "Jetty/9.2.10.v20150310" "-" "{\x22event\x22:\x22webhook\x22,\x22timestamp\x22:1534227163635,\x22message_token\x22:5210036030700670331}" "-" "-" "-" "-"
+
+```
  And viber-bot is GETTING(!) request from viber server, can see it, but reports that setting webhook failed.
 
 ## how to reproduce
