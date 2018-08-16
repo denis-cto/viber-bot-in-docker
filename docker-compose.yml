@@ -16,8 +16,8 @@ services:
     - "80:80"
     - "443:443"
     networks:
-      - frontend
-      - backend
+    - frontend
+    - backend
   viberhost:
     image: mobsted/telegramhost:latest
     container_name: viberhost
@@ -31,6 +31,7 @@ services:
       - backend
 networks:
   backend:
+  frontend:
 volumes:
   node_modules:
 

@@ -3,12 +3,9 @@ FROM keymetrics/pm2:latest-alpine
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
 
-COPY src src/
-COPY src/package.json .
-
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm install
+
 
 
 # Expose the listening port of your app
