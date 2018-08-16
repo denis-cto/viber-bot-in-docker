@@ -75,7 +75,7 @@ pm2 start ecosystem_test_viber.config.js --env=test
 
 
 
-###Problem! ###
+### Problem! ###
  Please help to fix NGINX config, so it will alllow viber-bot to set up webhook. I think that the problem is with some Headers maybe, or 
  with some connection problem between Viber.com - Nginx -Viber-bot...
  Please feel free to comment out this situation.
