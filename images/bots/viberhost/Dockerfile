@@ -2,11 +2,13 @@ FROM keymetrics/pm2:latest-alpine
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN set -x \
-&& echo "Starting DOCKER image with PM2" \
-    && npm i \
-    && ls -la \
-    && pwd;
+
+COPY src src/
+COPY src/package.json .
+
+# Install app dependencies
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN npm install
 
 
 # Expose the listening port of your app

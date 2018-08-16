@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "d30ce0e04a442d346865ff6c765ffb7d",
+      "password": "5457ec6e71c5c23d8ca786d46c77bdbc",
+      "tenant": "uk",
+      "server": "mobsted.ru"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "uk.mobsted.ru",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}

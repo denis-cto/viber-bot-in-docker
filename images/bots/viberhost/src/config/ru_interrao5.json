@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "404bfc8d6a10b4b3aa024700dcc78f2d",
+      "password": "039c2c014490496ed5047841bdb8e90c",
+      "tenant": "interrao",
+      "server": "mobsted.ru"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "interrao.mobsted.ru",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}

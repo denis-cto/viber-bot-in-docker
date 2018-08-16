@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "d7692e4fbd619c7b74542264fff8eaeb",
+      "password": "d5096d1c6bfacbdd5490b002bd2291db",
+      "tenant": "brusnika-ekb",
+      "server": "mobsted.ru"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "brusnika-ekb.mobsted.ru",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}

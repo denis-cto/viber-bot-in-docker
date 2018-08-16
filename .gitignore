@@ -1,8 +1,7 @@
 /mobsted/**
 /logs/**
 .idea/**
-/database/dumps/**
-/database/postgres10/**
-/database/postgres-pro-10/**
 /conf/letsencrypt/**
 .DS_Store
+node_modules/**
+images/bots/viberhost/src/node_modules/**

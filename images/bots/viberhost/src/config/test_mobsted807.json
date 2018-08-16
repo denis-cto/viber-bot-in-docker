@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "7863badb44c5d37d05c0e6ef84d4ed91",
+      "password": "5ad82aace3bfeb21c52fa08b9d84b82f",
+      "tenant": "denis",
+      "server": "mbst.xyz"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "denis.mbst.xyz",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}

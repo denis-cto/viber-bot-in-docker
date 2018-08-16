@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "d8d1940a08b27dae7e530d7488dd8f7e",
+      "password": "861d07bc900eb5724058208b5d0056fb",
+      "tenant": "lanbilling",
+      "server": "mobsted.ru"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "lanbilling.mobsted.ru",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}

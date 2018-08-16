@@ -23,7 +23,7 @@ services:
     container_name: viberhost
     working_dir: /home/www/mobsted/bots
     volumes:
-    - ${PROJECT_PATH}/bots:/home/www/mobsted/bots
+    - ${PROJECT_PATH}/src:/home/www/mobsted/bots
     - ./logs/pm2:/root/.pm2/logs/
     command: ecosystem_test_viber.config.js --env test --watch
     networks:

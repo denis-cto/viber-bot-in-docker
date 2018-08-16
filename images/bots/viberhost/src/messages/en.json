@@ -1,0 +1,19 @@
+{
+  "en": {
+    "like": "love",
+    "Hello": "Hello",
+    "There was an error while registering you": "There was an error while registering you",
+    "Text anything to start": "Text anything to get application link.",
+    "We dont know you. Tell us your phone": "We dont know you. Tell us your phone",
+    "Tell my phone number":"Tell my phone number",
+    "Your access from this messenger is blocked until ":"Your access from this messenger is blocked until ",
+    "Your access from this messenger was blocked until ":"Your access from this messenger was blocked until ",
+    "Wait a minute, please...":"Wait a minute, please...",
+    "We dont know you yet. Please send in your PHONE NUMBER":"We dont know you yet. Please send in your PHONE NUMBER",
+    "Your message was not delivered, ups... Try again":"Your message was not delivered, ups... Try again",
+    "Send my PHONE NUMBER":"Send my PHONE NUMBER",
+    "We have recieved your message and respond you ASAP. Press this button to enter your Account":"We have recieved your message and respond you ASAP. Press this button to enter your Account",
+    "My Account":"My Account",
+    "User joined":"User joined "
+  }
+}

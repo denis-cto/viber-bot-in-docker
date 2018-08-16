@@ -1,0 +1,19 @@
+{
+  "api": {
+    "config": {
+      "username": "4ef01aec224a946c1089955852acb2d0",
+      "password": "7f8f65f4f3476ac3b8ea7763c2013a2f",
+      "tenant": "brusnika-srg",
+      "server": "mobsted.ru"
+    }
+  },
+  "server": {
+    "config": {
+      "host": "brusnika-srg.mobsted.ru",
+      "startingPortTelegram": 40000,
+      "startingPortViber": 20000,
+      "startingPortFacebook": 30000,
+      "startingPortVk": 10000
+    }
+  }
+}
