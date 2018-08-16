@@ -23,15 +23,15 @@ export default class MobstedAndBotUser {
             denis.getActualDataPromise().then(() => {
                 return application.get();
             }).then(() => {
-                if ( ([startContext].join('') !== '') && ([startContext].join('')!=='/start')) { //   если есть контекст в кнопке
+                if ( ([startContext].join('') !== '') && ([startContext].join('')!=='/start')) { //   РµСЃР»Рё РµСЃС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІ РєРЅРѕРїРєРµ
                     //start context exists
                     console.log("startContext detected "+[startContext].join(''))
-                    if ([denis.data.ObjectId].join('')!=='')  // а вдруг в базе уже был установлен  objectid
+                    if ([denis.data.ObjectId].join('')!=='')  // Р° РІРґСЂСѓРі РІ Р±Р°Р·Рµ СѓР¶Рµ Р±С‹Р» СѓСЃС‚Р°РЅРѕРІР»РµРЅ  objectid
                     {
                         console.log('Trying to Get Context, but ObjectId already exists');
                         console.log([denis.data.ObjectId].join(''))
                     }
-                    return denis.decryptStartContextToObjectIds(startContext)  // расшифруем строку
+                    return denis.decryptStartContextToObjectIds(startContext)  // СЂР°СЃС€РёС„СЂСѓРµРј СЃС‚СЂРѕРєСѓ
                 }
                 else {
                     if (typeof(denis.data.ObjectId) !== "undefined") // acltual ObjectId found

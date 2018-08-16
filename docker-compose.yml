@@ -19,7 +19,7 @@ services:
     - frontend
     - backend
   viberhost:
-    image: mobsted/telegramhost:latest
+    image: mobsted/viberhost:latest
     container_name: viberhost
     working_dir: /home/www/mobsted/bots
     volumes:
