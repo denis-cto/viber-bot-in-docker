@@ -102,34 +102,6 @@ export default class ViberSender {
         })();
     };
 
-    validateMessageSchema(message) {
-        // return new Promise((resolve, reject) => {
-        //     if (message) {
-        //         var ajv = new Ajv();
-        //         var schema = routines.viberMessageSchema();
-        //         var isMessage = ajv.validate(schema, message); // true
-        //         if (isMessage) {
-        //             resolve(true);
-        //         }
-        //         else {
-        //             var reson = {
-        //                 'status': 'error',
-        //                 'reason': 'returned message schema is not valid',
-        //             };
-        //             reject(reson);
-        //         }
-        //     }
-        //     else {
-        //         var reason = {
-        //             'status': 'error',
-        //             'reason': 'message was not delivered',
-        //         };
-        //         // message was not delivered!
-        //         console.log('MESSAGE WAS NOT DELIVERED');
-        //         reject(reason);
-        //     }
-        // });
-    }
 }
 
 

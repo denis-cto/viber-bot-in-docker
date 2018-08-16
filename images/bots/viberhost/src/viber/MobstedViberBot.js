@@ -48,7 +48,7 @@ export default class MobstedViberBot {
     var viberListenerServer = require('http');
     viberListenerServer.createServer(this.miniapp.middleware()).listen(params['port'], () => {
       that.miniapp.setWebhook(webhookurl).catch(function (e) {
-        console.warn('FUCK. NO WEBHOOK SET! Problem IS HERE!')
+        console.warn('NO WEBHOOK SET! Problem IS HERE!')
         console.log(e);
       });
     });
